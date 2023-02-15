@@ -1,0 +1,11 @@
+ports:
+  - port: 8080
+    name: Examples Server
+  - port: 1234
+    name: ws yjs server
+    onOpen: ignore
+
+tasks:
+  - init: npm install
+    command: npm start
+  - command: npm run yjs-server 
